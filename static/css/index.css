@@ -1,0 +1,152 @@
+:root {
+    --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --msger-bg: #fff;
+    --border: 2px solid #ddd;
+    --left-msg-bg: #ececec;
+    --right-msg-bg: #579ffb;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: var(--body-bg);
+    font-family: Helvetica, sans-serif;
+  }
+  
+  .msger {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 867px;
+    margin: 25px 10px;
+    height: calc(100% - 50px);
+    border: var(--border);
+    border-radius: 5px;
+    background: var(--msger-bg);
+    box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .msger-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: var(--border);
+    background: #eee;
+    color: #666;
+  }
+  
+  .msger-chat {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  .msger-chat::-webkit-scrollbar {
+    width: 6px;
+  }
+  .msger-chat::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+  .msger-chat::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+  }
+  .msg {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+  }
+  .msg:last-of-type {
+    margin: 0;
+  }
+  .msg-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background: #ddd;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  .msg-bubble {
+    max-width: 450px;
+    padding: 15px;
+    border-radius: 15px;
+    background: var(--left-msg-bg);
+  }
+  .msg-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .msg-info-name {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  .msg-info-time {
+    font-size: 0.85em;
+  }
+  
+  .left-msg .msg-bubble {
+    border-bottom-left-radius: 0;
+  }
+  
+  .right-msg {
+    flex-direction: row-reverse;
+  }
+  .right-msg .msg-bubble {
+    background: var(--right-msg-bg);
+    color: #fff;
+    border-bottom-right-radius: 0;
+  }
+  .right-msg .msg-img {
+    margin: 0 0 0 10px;
+  }
+  
+  .msger-inputarea {
+    padding: 10px;
+    border-top: var(--border);
+    background: #eee;
+  }
+  .msger-inputarea * {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+  }
+  .msger-input {
+    flex: 1;
+    background: #ddd;
+  }
+  .msger-send-btn {
+    float:right;
+    background: rgb(0, 196, 65);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.23s;
+  }
+  .msger-send-btn:hover {
+    background: rgb(0, 180, 50);
+  }
+  
+  .msger-chat {
+    background-color: #fcfcfe;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M468.05 237.18 a5.48 5.48 0 1 0 10.96 0 a5.48 5.48 0 1 0 -10.96 0z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M933.41 475.41 a0.03 0.03 0 1 0 0.06 0 a0.03 0.03 0 1 0 -0.06 0z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M330.81 131.01L364.64 131.01L364.64 164.84L330.81 164.84z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M32.66 417.67L62.66 417.67L62.66 470.42L32.66 470.42z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M991.19 281.91L993.22 281.91L993.22 283.94L991.19 283.94z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M949.44 577.85a43.64 43.64 0 1 0-19-85.19z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M1228.09 503.26a0.06 0.06 0 1 0-0.07-0.09z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M276.25 344.47L302.66 344.47L302.66 350.06L276.25 350.06z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M515.98 219.69 a14.95 14.95 0 1 0 29.9 0 a14.95 14.95 0 1 0 -29.9 0z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M1177.19 6.82 a34.55 34.55 0 1 0 69.1 0 a34.55 34.55 0 1 0 -69.1 0z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M510.74 44.68L553.12 44.68L553.12 87.06L510.74 87.06z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M287.37 328.76L295.83 328.76L295.83 342.33L287.37 342.33z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M1241.23 516.78 a11.57 11.57 0 1 0 23.14 0 a11.57 11.57 0 1 0 -23.14 0z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M389.7 132.34 a8.95 8.95 0 1 0 17.9 0 a8.95 8.95 0 1 0 -17.9 0z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1194.76 474.69a38.92 38.92 0 1 0-54.29-55.78z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M150.32 305.76a1.09 1.09 0 1 0 2.1 0.62z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M418.67 456.9L452.57 456.9L452.57 510.02L418.67 510.02z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M1211.66 190.99a50.24 50.24 0 1 0-82.83 56.89z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M212.77 36.41L252.65 36.41L252.65 85.65L212.77 85.65z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M633.54 388.95L640.01 388.95L640.01 395.42L633.54 395.42z' fill='%23d3b714'%3e%3c/path%3e%3cpath d='M300.28 316.6a16.66 16.66 0 1 0-31.34-11.33z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M685.09 105.03L709.37 105.03L709.37 129.31L685.09 129.31z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M756.05 270.32L761.18 270.32L761.18 277.56L756.05 277.56z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M174.32 158.81L215.44 158.81L215.44 186.92L174.32 186.92z' fill='%23e73635'%3e%3c/path%3e%3cpath d='M1196.39 168.39L1216.03 168.39L1216.03 188.03L1196.39 188.03z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1262.83 129.97 a7.94 7.94 0 1 0 15.88 0 a7.94 7.94 0 1 0 -15.88 0z' fill='%23037b0b'%3e%3c/path%3e%3cpath d='M842.42 63.98 a14.45 14.45 0 1 0 28.9 0 a14.45 14.45 0 1 0 -28.9 0z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M868.85 177.27L901.88 177.27L901.88 220.04L868.85 220.04z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M548.56 351.84L571.41 351.84L571.41 389.85L548.56 389.85z' stroke='%23d3b714'%3e%3c/path%3e%3cpath d='M896.25 489.27L898.79 489.27L898.79 491.81L896.25 491.81z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M1390.63 385.94L1414.29 385.94L1414.29 409.6L1390.63 409.6z' stroke='%23037b0b'%3e%3c/path%3e%3cpath d='M45.19 236.07L79.52 236.07L79.52 284.73L45.19 284.73z' stroke='%23e73635'%3e%3c/path%3e%3cpath d='M1193.25 474.92L1222.55 474.92L1222.55 478.79L1193.25 478.79z' fill='%23037b0b'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  }
+  
