@@ -10,4 +10,7 @@ Analise texto e imagens:<br><br>
 -Baseie suas ações em fatos<br><br>
 Promova a responsabilidade digital.</p>
 <br><br><br>
+<img src="https://github.com/rafaelsorgato/gemini-fake-news/blob/main/tela.png">
+<br>
+Imagem modificada com fake news imbutida enviada para a análise e o resultado entregue:
 <img src="https://github.com/rafaelsorgato/gemini-fake-news/blob/main/lula.png">
